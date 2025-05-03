@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "7b2af72d-b9d6-4b99-877b-af766155ff9e",
+		"name": "payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29185004"
+	},
+	"item": [
+		{
+			"name": "Multi-Payment",
+			"item": [
+				{
+					"name": "payment process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"amount\": \"400\",\r\n\"currency\": \"EGP\",\r\n\"first_name\": \"Test\",\r\n\"last_name\": \"Account\",\r\n\"phone_number\": \"01010101010\",\r\n\"email\": \"test@account.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/process?gateway_type=paymob",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								"process"
+							],
+							"query": [
+								{
+									"key": "gateway_type",
+									"value": "paymob"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment process",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n\"amount\": \"400\",\r\n\"currency\": \"EGP\",\r\n\"first_name\": \"Test\",\r\n\"last_name\": \"Account\",\r\n\"phone_number\": \"01010101010\",\r\n\"email\": \"test@account.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/payment/process?gateway_type=paymob",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										"process"
+									],
+									"query": [
+										{
+											"key": "gateway_type",
+											"value": "paymob"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:14:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:14:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"url\": \"https://accept.paymob.com/standalone/?ref=i_LRR2azZhWEo1djZHNUtKK0ZKUGxmTWtUUT09X0hsLzFScC9lejl5VDEyNkl4OGlhRlE9PQ\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
