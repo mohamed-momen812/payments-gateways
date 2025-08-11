@@ -7,12 +7,11 @@ use Illuminate\Support\Facades\Http;
 
 class BasePaymentService
 {
-    /**
-     * Create a new class instance.
-     */
+    // here i declare the properties that will be used in the child classes, and give them values in the child classes
     protected  $base_url;
     protected array $header;
-    protected function buildRequest($method, $url, $data = null,$type='json'): \Illuminate\Http\JsonResponse
+
+    protected function buildRequest($method, $url, $data = null, $type = 'json'): \Illuminate\Http\JsonResponse
     {
         try {
             //type ? json || form_params
